@@ -1,8 +1,21 @@
+import Input from '../Input';
+import Button from '../Button';
+
 const Main = () => {
   return (
     <main>
       <form>
-        <input type="text" />
+        <Input
+          type={'number'}
+          id={'square-meter'}
+          span={'metro quadrado (1m2)'}
+        />
+        <Input
+          type={'number'}
+          id={'square-meter'}
+          span={'Quantidade de janela'}
+        />
+        <Button type={'submit'} span={'Enviar'} />
       </form>
     </main>
   );

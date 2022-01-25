@@ -1,14 +1,13 @@
 import Proptypes from 'prop-types';
 
-const Input = ({ type, id, value, handleChange, className }) => {
+const Input = ({ type, id, span, value, handleChange }) => {
   return (
     <label htmlFor={id}>
-      <span>{value}</span>
+      <span>{span}</span>
       <input
         type={type}
         name={value}
         value={value}
-        className={className}
         id={id}
         onChange={handleChange}
       />
@@ -21,7 +20,6 @@ Input.propTypes = {
   id: Proptypes.string,
   value: Proptypes.number,
   handleChange: Proptypes.func,
-  className: Proptypes.string,
 }.isRequired;
 
 export default Input;
